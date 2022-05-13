@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 100px;
+            background-color: blanchedalmond;
+        }
+        #box{
+            padding: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="btn">Click me!</button>
+    </div>
+
+    <script>
+        let d= document.getElementById('box')
+        let b= document.getElementById('btn')
+        
+        d.addEventListener('click', function(){
+            console.log("box was clicked");
+        });
+        b.addEventListener('click', function(){
+            console.log("btn was clicked");
+        });
+        document.body.addEventListener('click', function(){
+            console.log("body was clicked"), true;
+        });
+    </script>
+</body>
+</html>

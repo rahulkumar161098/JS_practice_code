@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Keyboard events</h3>
+
+    <script>
+        // keyboard events
+        // window.addEventListener('keydown', fun)
+        // function fun(e){
+        //     console.log(e.key);
+        // }
+
+        // scroll event
+        // window.addEventListener('scroll', function(){
+        //     console.log("scrolling");
+        // })
+
+        // check scroll up or down
+        // window.addEventListener('wheel', function(event){
+        //     if (event.deltaY < 0){
+        //         console.log("scrolling down");
+        //     }
+        //     else if(event.deltaY > 0){
+        //         console.log("scrolling up");
+        //     }
+        // })
+
+        // check how many pixels scroll
+
+        window.addEventListener('scroll', function(){
+            if(window.pageYOffset > 200){
+                document.body.style.background= 'red'
+            }
+            else{
+                document.body.style.background= 'white'
+            }
+        })
+    </script>
+</body>
+</html>

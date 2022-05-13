@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .color{
+            color: blueviolet;
+        }
+        .back{
+            width: 100%;
+            height: 300px;
+            background-color: aqua;
+            border: 5px solid gray;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="text" class="color">
+        this i for test
+    </div>
+
+    <script>
+        let box= document.getElementById('text')
+        box.className += " back"   
+        console.log(box.className);
+
+        // how to get width and height of a element
+        let w= document.getElementById('text')
+        let width = w.offsetWidth
+        let height = w. offsetHeight
+        console.log(width, height);
+
+        // exclude border px
+        let wid = w.clientWidth
+        let hgt = w. clientHeight
+        console.log(wid, hgt);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button id="btn" onclick="clicked()">Click me !</button> -->
+    <button id="btn">Click me !</button>
+
+    <script>
+        function clicked(){
+            console.log("Btn was clicked")
+            
+        }
+        // using event Listener
+        let Btn = document.getElementById('btn')
+        // Btn.addEventListener('click', clicked)
+
+        // using anomymous function
+        // btn.addEventListener('click', function(){
+        //     console.log('Botton was clicked')
+        // });
+        // btn.addEventListener('mouseover', function(){
+        //     console.log("mouse over was done")
+        // });
+        // btn.addEventListener('mouseout', function(){
+        //     console.log("mouse out was done")
+        // });
+
+        // removeEventListener
+        function event1(){
+            console.log("event one was done");
+        };
+        function event2(){
+            console.log("event second was done");
+        };
+        Btn.addEventListener('click', event1);
+        Btn.addEventListener('click', event2);
+
+        Btn.removeEventListener('click', event2)
+
+
+    </script>
+</body>
+</html>

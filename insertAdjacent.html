@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- beforebegin -->
+    <div id="head">
+        <!-- afterbegin -->
+        <h3>this is a heading</h3>
+        <p>this is paragrapg</p>
+        <!-- beforeend -->
+    </div>
+    <!-- afterend -->
+
+    <!-- change attribute -->
+    <button id="btn">send</button>
+
+    <script>
+
+        // selecting parent element
+        let parent = document.getElementById('head')
+        let text= "<h2>hello</h2>"
+
+        parent.insertAdjacentHTML('beforebegin', text)
+        parent.insertAdjacentHTML('afterbegin', text)
+        parent.insertAdjacentHTML('beforeend', text)
+        parent.insertAdjacentHTML('afterend', text)
+
+        // setAttribute
+        let set= document.getElementById('btn');
+        set.setAttribute('name', 'form')
+    </script>
+</body>
+</html>
