@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertor</title>
+    <style>
+        .container {
+            text-align: center;
+            padding: 40px;
+            background-color: cadetblue;
+            width: max-content;
+            margin: 0px auto;
+            margin-top: 50px;
+            border-radius: 5px;
+        }
+        .container .inputs{
+            display: flex;
+        }
+        .heading{
+            font-size: 30px;
+            font-weight: 600;
+            color: white;
+            padding-bottom: 20px;
+        }
+        .userInput{
+            padding: 10px 10px 10px 15px;
+            border-radius: 5px;
+            border: none;
+            margin: 10px;
+            font-size: 20px;
+        }
+        .inputs label{
+            color: whitesmoke;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">Temperature Converter</div>
+        <div class="inputs">
+            <div>
+                <label>Celsius</label><br>
+                <input type="number" id="cal" class="userInput" value="0">
+            </div>
+            <div>
+                <label> Fahrenheit</label><br>
+                <input type="number" id =fhr class="userInput" value="32">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cal= document.getElementById('cal');
+        let feh = document.getElementById('fhr')
+
+        cal.addEventListener('input', function(){
+            let val= this.value;
+            let changed= (val * 9/5) + 32;
+            if(!Number.isInteger(changed)){
+                changed= changed.toFixed(4)
+            }
+            feh.value=changed;
+
+        })
+        feh.addEventListener('input', function(){
+            let valf= this.value;
+            let c= (valf - 32) * 5/9;
+            if(!Number.isInteger(c)){
+                c= c.toFixed(4)
+            }
+            cal.value=c;
+
+        })
+    </script>
+</body>
+
+</html>

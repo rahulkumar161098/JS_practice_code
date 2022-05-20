@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.google.com" id="anchor">Click me!</a>
+    <!-- <a href="https://www.google.com" id="btn1"> Google</a> -->
+    <button id="btn1">Google</button>
+
+    <script>
+        let a=document.getElementById('anchor');
+        a.addEventListener('click', function(e){
+            console.log("clicked");
+            e.preventDefault();
+        })
+
+        // window innner height width and window outer height and width
+        console.log(window.innerHeight);
+        console.log(window.innerWidth);
+
+        console.log(window.outerHeight);
+        console.log(window.outerWidth);
+
+        // open new windows
+        let btn1= document.getElementById('btn1');
+        let url = "https://www.google.com";
+        // let name= "google"
+        let features= "width=400px, height=400px"
+        btn1.addEventListener('click', function(){
+            window.open(url, "google", features);
+        })
+    </script>
+    </script>
+</body>
+</html>

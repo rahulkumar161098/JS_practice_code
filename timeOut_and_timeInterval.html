@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button id="clear">clear</button>
+    <script>
+        // let setTimrOutID = setTimeout(fun, 5000);   //it return a id for clear time out
+        // function fun(){
+        //     alert('please subscribe.....');
+        // };
+        // clearTimeout(setTimrOutID);
+
+
+        // setTime interval
+
+        let btn = document.getElementById('clear');
+
+        let setIntervalId= setInterval(fun1, 3000);
+        function fun1(){
+            console.log("please subscrib....");
+        }
+        btn.addEventListener('click', function(){
+            console.log('clear time interval');
+            clearInterval(setIntervalId)
+        })
+        
+    </script>
+</body>
+</html>

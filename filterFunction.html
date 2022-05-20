@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>filter function</h4>
+
+    <script>
+        let arr=[2,43,56,87,1,5, 12, 23, 54]
+
+        // anonymous function
+
+        // let arr1= arr.filter(function(val){
+        //     return val>10;
+        // })
+
+        // using arrow function
+        let arr1= arr.filter(val => val>10)
+
+
+        let team= [
+            {
+                name: "Rahul",
+                position: "fullstack developer"
+            },
+            {
+                name: "Aayush",
+                position: "fullstack developer"
+            },
+            {
+                name: "Rupak",
+                position: "network testing"
+            },
+            {
+                name: "Rohit",
+                position: "tester"
+            },
+            {
+                name: "shaym",
+                position: "data analytics"
+            },
+            {
+                name: "abhi",
+                position: "fullstack developer"
+            }
+        ];
+        let teamDev= team.filter(val => val.position == "fullstack developer")
+
+        console.log(arr1);
+        console.log(teamDev);
+    </script>
+</body>
+</html>

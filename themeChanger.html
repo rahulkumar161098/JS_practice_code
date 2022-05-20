@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>theme changer</title>
+    <style>
+        .container{
+            width: 80%;
+            height: max-content;
+            margin: 0 auto;
+        }
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin: 15px 0px;
+        }
+        .theme{
+            position: absolute;
+            right: 10%;
+
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid gray;
+            cursor: pointer;
+            /* background-color: aqua; */
+        }
+        #white{
+            background-color: #ffffff;
+        }
+        #aqua{
+            background-color: #00ffff;
+        }
+        #blueviolet{
+            background-color: #8a2be2;
+        }
+        #black{
+            background-color: #000000;
+        }
+        .menu {
+            background-color: teal;
+            position: sticky;
+            top: 0;
+        }
+        .menu ul li{
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="theme">
+            <button class="btn" id="white" onclick="changeBg('#ffffff')"></button>
+            <button class="btn" id="aqua" onclick="changeBg('#00ffff')"></button>
+            <button class="btn" id="blueviolet" onclick="changeBg('#8a2be2')"></button>
+            <button class="btn" id="black" onclick="changeBg('#000000')"></button>
+        </div>
+        <h2>change background</h2>
+       
+        <img src="pexels-cesar-perez-733745.jpg" alt="">
+        <div class="menu">
+            <ul>
+                <li>Home</li>
+                <li>Service</li>
+                <li>About</li>
+            </ul>
+        </div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique culpa, dolores quibusdam explicabo quam incidunt blanditiis nostrum doloribus eligendi molestias obcaecati, id provident nobis deleniti commodi sapiente illum. Recusandae repellat omnis ullam fugit voluptate sint repellendus cumque, optio maxime facere placeat nihil error rerum, id veniam aliquid sed nulla quos enim esse, commodi autem amet quo. Tempora magnam at, adipisci unde, reiciendis veritatis id distinctio doloremque delectus libero pariatur autem error deleniti cupiditate odit corporis fuga quia vitae expedita minus iusto voluptatibus. Pariatur, earum aut doloremque in enim odit voluptates debitis eius optio, unde laborum iure ipsam vel dignissimos deserunt, ea soluta nihil tempora libero nobis sint voluptate consectetur. Animi molestias, adipisci vero enim voluptates ex architecto tempore error? Aspernatur eius modi ex fugit, repellendus voluptas adipisci cum laudantium! Ducimus tempore laborum in aspernatur facilis illo quis quasi cum consequatur. Quisquam odio nemo praesentium veniam voluptatem nulla, molestiae natus amet, dolore enim inventore pariatur ullam totam, repellendus recusandae! Sint accusamus hic minus rem vel inventore eveniet nesciunt nostrum neque itaque. Harum sed molestiae quasi quia magni reiciendis consequuntur amet temporibus repellat sapiente molestias unde, ipsum incidunt cum exercitationem nulla natus a ea perspiciatis sequi quas possimus! Harum nihil at quis totam, natus et ipsum, eveniet quidem suscipit cumque aut autem consequatur illum deleniti rem minima quisquam? Odit fugiat, modi quod alias atque dolore ullam accusamus quos excepturi dolor fuga minima adipisci maiores dolorem nulla quis odio blanditiis reiciendis cum aliquid illum sed maxime corporis. Quis cupiditate voluptatibus dolorum sint illum, fugiat sed dolorem molestiae ipsum perspiciatis rem delectus repellendus fugit veniam id vero, ut eligendi? Aut impedit aliquam, mollitia tempore deserunt dolor saepe recusandae architecto deleniti perspiciatis illo similique vel dignissimos. Labore ipsum, blanditiis tenetur vero autem perspiciatis cumque quibusdam et, aperiam maxime ab sequi eos nesciunt quos molestiae iure!
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate nemo consequuntur ad dolorem odio cumque nam similique debitis quae asperiores sequi deleniti est facilis dignissimos eum qui maxime ratione temporibus, corrupti amet ex ullam blanditiis quod! Suscipit architecto, officiis et quos sit vero doloribus, reiciendis quisquam iusto enim tempora nulla. Corrupti voluptatem nostrum, saepe cum impedit debitis rem harum facilis quas ex minima assumenda dolorem rerum magni libero maiores dolores corporis quos beatae iure dicta! Reprehenderit nihil, labore dolorum nulla impedit earum consequatur? Commodi, repudiandae perferendis eos accusantium dolores est numquam similique saepe ad ipsum quia sequi consequuntur, voluptatum aliquid fuga ipsam! Non, iure omnis. Quas tempora accusamus est, maxime reprehenderit mollitia quibusdam omnis repellendus et ab at dolorum minus. Culpa dolore eligendi qui at nisi provident ab rem temporibus aspernatur, repellendus quod maxime, dolorem eveniet esse distinctio iste. Aspernatur eligendi facere commodi quae id voluptatum ducimus dolorem sit amet accusamus quibusdam recusandae dicta optio quidem, illum laborum ipsum. Quo, perferendis cum quam veniam consequuntur blanditiis, minima quae beatae ullam molestiae nulla voluptatem fugit deserunt, libero ab suscipit molestias tempore vero impedit magni eaque explicabo sapiente ea. Expedita necessitatibus explicabo iure similique quo eius, ad ut quia facere alias.
+        </p>
+    </div>
+
+    <script>
+        function changeBg(color){
+            document.body.style.backgroundColor= color;
+            console.log(color);
+            // debugger;
+            if( color=="#000000"){
+                document.body.style.color= 'yellow';
+            }
+            else{
+                document.body.style.color = 'black';
+            };
+        }
+    </script>
+</body>
+</html>

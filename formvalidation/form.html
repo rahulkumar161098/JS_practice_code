@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="contain">
+        <form action="" onsubmit="return onSubmitForm()">
+            <h3>Sign Up</h3>
+            <div class="user_field">
+                <label for="name">Uesr name</label>
+                <input type="text" class="user_input" id="user_name">
+                <span id="username_error"></span>
+            </div>
+            <div class="user_field">
+                <label for="name">Email</label>
+                <input type="email" class="user_input" id="user_email">
+                <span id="email_error"></span>
+            </div>
+            <div class="user_field">
+                <label for="name">Mobile</label>
+                <input type="text" class="user_input" id="user_mobile">
+                <span id="mobile_error"></span>
+            </div>
+            <div class="user_field">
+                <label for="name">Password</label>
+                <input type="text" class="user_input" id="user_password">
+                <span id="password_error"></span>
+            </div>
+            <div class="btn">
+                <input type="submit" class="submit_btn" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let name= document.getElementById('user_name');
+        let email= document.getElementById('user_email');
+        let mobile= document.getElementById('user_mobile');
+        let password= document.getElementById('user_password')
+        fla=1
+
+        function onSubmitForm (){
+            // user name field
+            if(name.value==''){
+                document.getElementById('username_error').innerHTML="Field are required";
+                flag=0
+            }else if(name.value.length <= 8){
+                document.getElementById('username_error').innerHTML="username should be 8 charaters";
+                flag=0
+            }
+            else{
+                document.getElementById('username_error').innerHTML="";
+                flag=1
+            };
+
+            // user email validation
+            if(email.value == ''){
+                document.getElementById('email_error').innerHTML="Field are required";
+                flag=0;
+            }else{
+                document.getElementById('email_error').innerHTML="";
+                flag=1
+            };
+
+            // user mobile validation
+            if(mobile.value== ''){
+                document.getElementById('mobile_error').innerHTML="Field are required";
+                flag= 0;
+                // debugger
+                // if(isString(mobile.value)){
+                // document.getElementById('mobile_error').innerHTML="please enter numeric value";
+                // flag= 0;
+                // }else{
+                //     document.getElementById('mobile_error').innerHTML="";
+                // flag= 0;
+                // }
+            }else if(mobile.value.length < 10){
+                document.getElementById('mobile_error').innerHTML="mobile number less then 10 digits";
+                flag= 0;
+            }else if(mobile.value.length > 10){
+                document.getElementById('mobile_error').innerHTML="mobile number greater then 10 digits";
+                flag= 0;
+            }else{
+                document.getElementById('mobile_error').innerHTML="";
+                flag= 1;
+            };
+
+            // user password validtion
+            if (password.value== ''){
+                document.getElementById('password_error').innerHTML= "Field is required"
+                flag= 0
+            }else if(password.value.length <=8){
+                document.getElementById('password_error').innerHTML= "Password should be 8 character"
+                flag= 0
+            }else{
+                document.getElementById('password_error').innerHTML= "Password should be 8 character"
+                flag= 1
+            };
+
+            if(flag){
+                return true
+            }else{
+                return false
+            }
+        }
+    </script>
+</body>
+
+</html>

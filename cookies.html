@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Cookies Handling</h4>
+
+    <script>
+        // cookie setting
+        document.cookie = 'name=milk, breads';
+        let c=document.cookie
+        alert(c)
+
+        // localStorage setting
+
+        // set localStorage
+        localStorage.setItem('name','rahul');
+        localStorage.setItem('name1','abhi');
+        
+        // get localstorage items
+        let l= localStorage.getItem('name1');
+        console.log(l);
+
+        // remove localStorage items
+        localStorage.removeItem('name1')
+
+        
+        // sesion storage
+        sessionStorage.setItem('name', 'Rahul')
+        // get sesion storage items
+        let s= sessionStorage.getItem('name')
+        console.log(s);
+        // remove session storage items
+        sessionStorage.removeItem('name')
+
+
+    </script>
+</body>
+</html>
